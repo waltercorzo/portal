@@ -17,7 +17,7 @@
 
         header {
             background-color: #ffffff;
-            padding: 10px 30px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -28,16 +28,16 @@
         .branding {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
         }
 
         .branding img {
-            height: 40px;
+            height: 32px;
         }
 
         .branding h1 {
             margin: 0;
-            font-size: 20px;
+            font-size: 18px;
             color: #004488;
         }
 
@@ -47,37 +47,33 @@
 
         .patient-info h2 {
             margin: 0;
-            font-size: 16px;
+            font-size: 14px;
             color: #123f75;
         }
 
         .patient-info a {
-            margin-left: 15px;
+            margin-left: 10px;
             text-decoration: none;
             color: #0a3e91;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .layout {
             display: flex;
             flex: 1;
             overflow: hidden;
+            position: relative;
         }
 
         nav {
-            width: 240px;
+            width: 220px;
             background-color: #0a3e91;
             color: #ffffff;
             padding-top: 20px;
             box-sizing: border-box;
             box-shadow: 2px 0 5px rgba(0,0,0,0.05);
-        }
-
-        nav h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #ffffff;
+            transition: transform 0.3s ease;
         }
 
         nav ul {
@@ -101,6 +97,10 @@
             font-weight: 500;
             text-decoration: none;
             display: block;
+        }
+
+        nav ul li a:active {
+            background-color: #124caa;
         }
 
         main {
@@ -144,17 +144,66 @@
         }
 
         .avatar {
-            width: 36px;
-            height: 36px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             background-color: #ccc;
             display: inline-block;
             vertical-align: middle;
         }
+
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #0a3e91;
+            color: white;
+            border: none;
+            font-size: 20px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            z-index: 1001;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                height: 100%;
+                z-index: 1000;
+                transform: translateX(-100%);
+            }
+
+            nav.open {
+                transform: translateX(0);
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
     </style>
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.remove('open');
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('nav ul li a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="branding">
             <img src="logo.png" alt="WalterVision">
             <h1>WalterVISION</h1>
