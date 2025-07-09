@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Turnos - WalterVision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0a3e91;
+        }
+
+        .turno {
+            background-color: #e6f0ff;
+            border-left: 5px solid #0a3e91;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .turno p {
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .section-title {
+            margin-top: 40px;
+            color: #0a3e91;
+            font-size: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        select, input[type="date"], input[type="time"], button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #0a3e91;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #072f6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mis Turnos</h1>
+
+        <div class="turno">
+            <p><strong>📅 Próximo turno:</strong> 15/07/2025</p>
+            <p><strong>🕓 Hora:</strong> 10:30 hs</p>
+            <p><strong>📍 Sector:</strong> Lentes de Contacto</p>
+        </div>
+
+        <h2 class="section-title">Solicitar nuevo turno</h2>
+        <form>
+            <label for="sector">Seleccionar sector</label>
+            <select id="sector" name="sector" required>
+                <option value="">-- Seleccionar --</option>
+                <option value="Optica">Óptica</option>
+                <option value="Lentes de contacto">Lentes de contacto</option>
+                <option value="Protesis">Prótesis</option>
+                <option value="BajaVision">Baja Visión</option>
+            </select>
+
+            <label for="fecha">Fecha del turno</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="hora">Hora del turno</label>
+            <input type="time" id="hora" name="hora" required>
+
+            <button type="submit">Agendar turno</button>
+        </form>
+    </div>
+</body>
+</html>

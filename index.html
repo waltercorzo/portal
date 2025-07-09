@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal Paciente - WalterVision</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f7fb;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e6ed;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+        }
+
+        .branding {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .branding img {
+            height: 40px;
+        }
+
+        .branding h1 {
+            margin: 0;
+            font-size: 20px;
+            color: #004488;
+        }
+
+        .patient-info {
+            text-align: right;
+        }
+
+        .patient-info h2 {
+            margin: 0;
+            font-size: 16px;
+            color: #123f75;
+        }
+
+        .patient-info a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #0a3e91;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .layout {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        nav {
+            width: 240px;
+            background-color: #0a3e91;
+            color: #ffffff;
+            padding-top: 20px;
+            box-sizing: border-box;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+        }
+
+        nav h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 15px 25px;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li:hover {
+            background-color: #124caa;
+            border-left: 4px solid #ffc107;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            font-weight: 500;
+            text-decoration: none;
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            height: calc(100vh - 60px);
+            background-color: #f4f7fb;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="branding">
+            <img src="logo.png" alt="WalterVision">
+            <h1>WalterVISION</h1>
+        </div>
+        <div class="patient-info">
+            <h2>Paciente: Kiara Corzo</h2>
+            <a href="#">Mi Perfil</a>
+            <a href="#">Cerrar sesión</a>
+        </div>
+    </header>
+    <div class="layout">
+        <nav>
+            <ul>
+                <li><a href="dashboard_2.html" target="contentFrame">🏠 Inicio</a></li>
+                <li><a href="mis-estudios.html" target="contentFrame">📄 Mis Estudios</a></li>
+                <li><a href="mis-lentes.html" target="contentFrame">👓 Mis Lentes</a></li>
+                <li><a href="mis-turnos.html" target="contentFrame">📅 Turnos</a></li>
+                <li><a href="pedidos-pendientes.html" target="contentFrame">📦 Mis Pedidos Pendientes</a></li>
+                <li><a href="salud-visual.html" target="contentFrame">🩺 Salud Visual</a></li>
+            </ul>
+        </nav>
+        <main>
+            <iframe name="contentFrame" src="dashboard_2.html"></iframe>
+        </main>
+    </div>
+</body>
+</html>
+

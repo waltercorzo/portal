@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio - Portal WalterVision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 30px 40px;
+        }
+
+        .promo {
+            background-color: #e6f0ff;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            color: #0a3e91;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+            display: block;
+            text-decoration: none;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #0a3e91;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .club-card {
+            border: 2px solid #0a3e91;
+        }
+
+        .club-card h4 {
+            margin: 10px 0 5px 0;
+            color: #000;
+        }
+
+        .btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0a3e91;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="promo">
+        👓 Promo 2x1 en anteojos recetados. Válido hasta el 20/07
+    </div>
+
+    <div class="grid">
+        <a href="mis-estudios.html" target="contentFrame" class="card">
+            <h3>📄 Estudios</h3>
+            <p>Ver los resultados</p>
+        </a>
+        <a href="mis-lentes.html" target="contentFrame" class="card">
+            <h3>👓 Mis Lentes</h3>
+            <p>Detalles de mis lentes</p>
+        </a>
+        <a href="mis-turnos.html" target="contentFrame" class="card">
+            <h3>📅 Turnos</h3>
+            <p>Próximo turno: 25 de junio</p>
+        </a>
+        <a href="pedidos-pendientes.html" target="contentFrame" class="card">
+            <h3>📦 Mis Pedidos Pendientes</h3>
+            <p>Seguimiento de pedidos</p>
+        </a>
+        <a href="salud-visual.html" target="contentFrame" class="card">
+            <h3>🩺 Salud Visual</h3>
+            <p>Recomendaciones para el cuidado</p>
+        </a>
+        <a href="beneficios.html" target="contentFrame" class="card club-card">
+            <h3>🏷️ WV Exclusive</h3>
+            <h4>Cliente Premium</h4>
+            <span class="btn">Ver beneficios</span>
+        </a>
+    </div>
+</body>
+</html>

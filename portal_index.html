@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>WalterVision - Portal Paciente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 220px;
+            background-color: #ffffff;
+            border-right: 1px solid #ddd;
+            padding-top: 20px;
+            height: 100vh;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #123f75;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 15px 20px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .sidebar li:hover {
+            background-color: #eef3f9;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px 40px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .promo {
+            background-color: #e6f0ff;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 20px 0;
+            color: #0a3e91;
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #0a3e91;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .club-card {
+            border: 2px solid #0a3e91;
+        }
+
+        .club-card h4 {
+            margin: 10px 0 5px 0;
+            color: #000;
+        }
+
+        .btn {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #0a3e91;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>WalterVISION</h2>
+        <ul>
+            <li>🏠 Inicio</li>
+            <li>📄 Estudios</li>
+            <li>👓 Mis Lentes</li>
+            <li>📅 Turnos</li>
+            <li>📦 Mis Pedidos Pendientes</li>
+            <li>🩺 Salud Visual</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h2>Paciente: Kiara Corzo</h2>
+            <div>
+                <a href="#">Mi Perfil</a> | 
+                <a href="#">Cerrar sesión</a>
+            </div>
+        </div>
+
+        <div class="promo">
+            👓 Promo 2x1 en anteojos recetados. Válido hasta el 20/07
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>📄 Estudios</h3>
+                <p>Ver los resultados</p>
+            </div>
+            <div class="card">
+                <h3>👓 Mis Lentes</h3>
+                <p>Detalles de mis lentes</p>
+            </div>
+            <div class="card">
+                <h3>📅 Turnos</h3>
+                <p>Próximo turno: 25 de junio</p>
+            </div>
+            <div class="card">
+                <h3>📦 Mis Pedidos Pendientes</h3>
+                <p>Seguimiento de pedidos</p>
+            </div>
+            <div class="card">
+                <h3>🩺 Salud Visual</h3>
+                <p>Recomendaciones para el cuidado</p>
+            </div>
+            <div class="card club-card">
+                <h3>🏷️ WV Exclusive</h3>
+                <h4>Cliente Premium</h4>
+                <a href="#" class="btn">Ver beneficios</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
